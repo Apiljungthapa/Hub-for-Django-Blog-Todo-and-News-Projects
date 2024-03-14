@@ -1,0 +1,20 @@
+
+{% extends "aznews/base.html" %}
+
+{% load static %}
+<main>
+    {% block content %}
+    {% include "aznews/home/trending/trending.html" %}
+   
+   
+    {% include "aznews/home/weekly.html" %}
+    {% include "aznews/home/whats_new.html" %}
+ 
+   {% include "aznews/home/recent.html" %}
+
+    {% endblock content %}
+</main>
+
+
+
+

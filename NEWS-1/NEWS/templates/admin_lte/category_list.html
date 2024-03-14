@@ -1,0 +1,55 @@
+{% extends "admin_lte/base.html" %}
+
+{% block content %}
+<div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">DataTable with minimal features & hover style</h3>
+        <div class="float-right">
+          <a href="{% url 'news_admin:category-create'%}" class="btn btn-primary">Add</a>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <table id="example2" class="table table-bordered table-hover">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Action</th>
+           
+          </tr>
+          </thead>
+          <tbody>
+
+          {% for category  in categories %}
+            <tr>
+              <td>{{category.name}}</td>
+              
+              <td>
+                <a href="{% url 'news_admin:post-update' category.pk %}" class="btn btn-success">Update</a>
+                
+                <a href="{% url 'news_admin:post-delete' category.pk %}" class="btn btn-danger">Delete</a>
+              </td>
+              
+            </tr>
+          {% endfor %}
+          
+          </tbody>
+          <tfoot>
+          <tr>
+            <th>Name</th>
+            <th>is published</th>
+            <th>Action</th>
+           
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+
+{% endblock content %}
+
+

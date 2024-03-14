@@ -1,0 +1,27 @@
+{% extends "news_admin/base.html" %}
+
+
+
+{% block content %}
+
+<div class="row">
+    <div class="column">
+        <div class="posts">
+            <div class="date">{{posts.published_at}}</div>
+            <h1>
+               <a href=""> {{posts.title}}<a/>
+            </h1>
+            <div class="date-author">@{{posts.author.username}}</div>
+            <p>{{posts.content}}</P>
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'post-update' posts.pk %}" class="btn btn-success">Edit</a>
+                <a href="{% url 'post-delete' posts.pk %}" class="btn btn-danger">Delete</a>
+                {% endif %}
+
+            
+            
+        </div>
+    </div>  
+</div>
+
+{% endblock content %}

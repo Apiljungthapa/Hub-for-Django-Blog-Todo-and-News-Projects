@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <br>
+    <button onclick='TurnOffLight()'>Turn off the light</button>
+    <img onmouseover="TurnOnLight()" onmouseout="TurnOffLight()" border="0" src="pic_bulboff.gif" alt="Off Bulb" id="bulb">
+    <button onclick='TurnOnLight()'>Turn on the light</button>
+    <br>
+    <br>
+    <br>
+
+    <button onclick="document.getElementById('CurrentDate').innerHTML=Date()">
+        click me
+    </button>
+    <p id="CurrentDate"></p>
+
+    <script>
+        let x = 5;
+        let y = 6;
+        sum = x + y;
+        console.log(sum);
+
+        function TurnOnLight() {
+            console.log("Turning on light");
+            document.getElementById("bulb").src = "pic_bulbon.gif";
+        }
+
+        function TurnOffLight() {
+            console.log("Turning off light");
+            document.getElementById("bulb").src = "pic_bulboff.gif";
+        }
+    </script>
+</body>
+</html>
