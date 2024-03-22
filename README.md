@@ -51,7 +51,7 @@ Follow these steps to run the DjangoTriadHub project locally:
 
 Clone the DjangoTriadHub repository to your local machine using the following command:
 
-git clone repo
+git clone [repo](https://github.com/Apiljungthapa/Hub-for-Django-Blog-Todo-and-News-Projects/tree/993464b7c880ecb2fa7808ee165bd5cc9ce0388c)
 
 ### Step 2: Set Up Each Individual Project
 
